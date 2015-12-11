@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
 
   s.framework  = "MediaPlayer"
   s.requires_arc = true
-  s.dependency "AFNetworking/UIKit", "~>2.2"
+  s.dependency "SDWebImage", "~>3.7"
 
 end
