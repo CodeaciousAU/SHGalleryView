@@ -9,7 +9,7 @@
 #import "SHImageMediaItemViewController.h"
 #import "SHMediaControlView.h"
 #import "SHMediaItem.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "SHGalleryViewControllerChild.h"
 
 #define ZOOM_VIEW_TAG 100
@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
-    [_imageView setImageWithURL:[NSURL URLWithString:self.mediaItem.resourcePath] placeholderImage:nil];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:self.mediaItem.resourcePath] placeholderImage:nil];
     [_imageScrollView setDelegate:self];
     [_imageScrollView setBouncesZoom:YES];
 

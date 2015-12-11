@@ -11,7 +11,7 @@
 #import "SHMediaControlView.h"
 #import "SHUtil.h"
 #import "SHMediaItem.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "SHGalleryViewControllerChild.h"
 #import "SHGalleryView.h"
 
@@ -48,7 +48,7 @@
     [self.view addSubview:_player.view];
     [SHUtil constrainViewEqual:_player.view toParent:self.view];
 
-    [_imgThumbnail setImageWithURL:[NSURL URLWithString:self.mediaItem.mediaThumbnailImagePath]];
+    [_imgThumbnail sd_setImageWithURL:[NSURL URLWithString:self.mediaItem.mediaThumbnailImagePath]];
     [self.view bringSubviewToFront:_imgThumbnail];
 }
 
