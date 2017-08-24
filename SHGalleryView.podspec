@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
 
   s.framework  = "MediaPlayer"
   s.requires_arc = true
-  s.dependency "SDWebImage", "~>3.7"
+  s.dependency "SDWebImage", "~>4.0"
 
 end
